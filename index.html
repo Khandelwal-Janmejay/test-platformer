@@ -74,7 +74,7 @@ function gameLoop() {
     const platformRight = p.x + p.width;
 
     const horizontalOverlap = playerRight > platformLeft && playerLeft < platformRight;
-    const fallingOntoPlatform = velocityY >= 0 && playerBottom >= platformTop && playerTop < platformTop;
+    const fallingOntoPlatform = velocityY >= 0 && playerBottom >= platformTop && playerTop+35 < platformTop;
 
     if(horizontalOverlap && fallingOntoPlatform){
       playerPos.y = platformTop - playerHeight;
